@@ -1,3 +1,27 @@
-.kitchen
+# Ansible Tower ignore list
+
+# Ansible runtime and backups
+*.original
+*.tmp
+*.bkp
 *.retry
-Gemfile.lock
+*.*~
+inventory/
+
+# Tower runtime roles
+roles/**
+!roles/requirements.yml
+
+# Try to avoid any plain-text passwords
+*pwd*
+*pass*
+*password*
+*.txt
+
+# Exclude all binaries
+*.bin
+*.jar
+*.tar
+*.zip
+*.gzip
+*.tgz
